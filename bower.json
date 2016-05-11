@@ -1,0 +1,21 @@
+{
+  "name": "tripplanner",
+  "description": "workshop",
+  "main": "app.js",
+  "authors": [
+    "belinda & jennifer"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/FullstackAcademy/tripplanner",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.3"
+  }
+}
