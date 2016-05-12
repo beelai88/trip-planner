@@ -19,18 +19,37 @@
   <body>
     <!-- TOP HEADER BAR WITH JUST APP NAME -->
     <header id="header" class="clearfix" role="banner">
-      <div class="h-group" id="name-and-slogan">
         <h1 id="site-name">
-          <a href="/" title="Home page">Trip Planner 2.0</a>
+          Trip Planner 2.0
         </h1>
-      </div>
       <!-- MENU BUTTON ON THE RIGHT -->
-      <button id="menuButton" class style="display: inline-block;">
+<!--       <button id="menuButton" class style="display: inline-block;">
         <div class='line line_1'></div>
         <div class='line line_2'></div>
         <div class='line line_3'></div>        
-      </button>
+      </button> -->
     </header>
+
+    <main class="main-container">
+    <!-- any container position absolute will be in respective to the nearest parent container that is NOT static. --> 
+      <div class="map">
+        <img src="/photos/map.png">
+          <nav class="nav-bar">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+      </div>
+
+      <div class="menu-button">
+        <div class='line line_1'></div>
+        <div class='line line_2'></div>
+        <div class='line line_3'></div>          
+      </div>
+
+    </main>    
     
     {% block body %}{% endblock %}
 
