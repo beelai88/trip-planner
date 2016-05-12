@@ -17,21 +17,20 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Shoestring Project</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
+    <!-- TOP HEADER BAR WITH JUST APP NAME -->
+    <header id="header" class="clearfix" role="banner">
+      <div class="h-group" id="name-and-slogan">
+        <h1 id="site-name">
+          <a href="/" title="Home page">Trip Planner 2.0</a>
+        </h1>
+      </div>
+      <!-- MENU BUTTON ON THE RIGHT -->
+      <button id="menuButton" class style="display: inline-block;">
+        <div class='line line_1'></div>
+        <div class='line line_2'></div>
+        <div class='line line_3'></div>        
+      </button>
+    </header>
     
     {% block body %}{% endblock %}
 
