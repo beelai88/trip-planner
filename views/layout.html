@@ -8,64 +8,37 @@
 
     <title>Trip Planner 2.0</title>
 
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/bootstrap"> 
-    <link rel="stylesheet" href="/jquery">
-
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+     <script src="https://use.fontawesome.com/36f4a4674b.js"></script>
+    
     <link href="/stylesheets/tripplanner.css" rel="stylesheet">
+    <script type="text/javascript" src="/jquery/tripplanner.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU-hS4K2CFV2FSjmcCm3YFLM44W4pKb4g&sensor=true"></script>
+    <script type="text/javascript" src="/map/map.js"></script>
 
   </head>
 
   <body>
-    <!-- TOP HEADER BAR WITH JUST APP NAME -->
     <header id="header" class="clearfix" role="banner">
         <h1 id="site-name">
           Trip Planner 2.0
         </h1>
-      <!-- MENU BUTTON ON THE RIGHT -->
-<!--       <button id="menuButton" class style="display: inline-block;">
-        <div class='line line_1'></div>
-        <div class='line line_2'></div>
-        <div class='line line_3'></div>        
-      </button> -->
     </header>
 
-    <main class="main-container">
-    <!-- any container position absolute will be in respective to the nearest parent container that is NOT static. --> 
-      <div class="map">
-        <img src="/photos/map.png">
-          <nav class="nav-bar">
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-          </nav>
-      </div>
 
-      <div class="menu-button">
-        <div class='line line_1'></div>
-        <div class='line line_2'></div>
-        <div class='line line_3'></div>          
-      </div>
-
-    </main>    
-    
     {% block body %}{% endblock %}
 
-    <div class="container">
-
-      <hr>
-
-      <footer>
+<!--       <footer>
         <div class="row">
           <div class="col-lg-12">
             <p id='footer'>Copyright &copy; Belinda and Jennifer</p>
           </div>
         </div>
-      </footer>
-
-    </div><!-- /.container -->
+      </footer> -->
 
   </body>
 </html>

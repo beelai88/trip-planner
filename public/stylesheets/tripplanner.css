@@ -1,27 +1,27 @@
-header {
-  font-size: 15px;
+body, .row, #content-column {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+#map-canvas {
+  position: absolute;
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: padding-box;
   text-align: center;
-  font-family: Helvetica; }
-
-.main-container {
-  padding-left: 60px;
-  padding-right: 60px;
-  position: relative; }
-
-.map img {
-  width: 100%; }
-
-.map {
-  position: relative;
-  overflow: hidden; }
+  height: 700px;
+  width: 100%;
+  top: 69px;
+  left: 0; }
 
 .menu-button {
   height: 30px;
   width: 46px;
   position: absolute;
-  top: 50%;
+  top: -33px;
   transform: translateY(-50%);
-  right: 37px;
+  left: 30px;
   transition: height .2s linear; }
   .menu-button .line {
     position: absolute;
@@ -40,28 +40,372 @@ header {
 .menu-button:hover {
   height: 34px; }
 
-.nav-bar {
+.add-button {
+  height: 30px;
+  width: 46px;
   position: absolute;
-  background-color: rgba(134, 121, 131, 0.8);
-  width: 25%;
-  right: 0px;
-  top: 0px;
-  height: 100%; }
-  .nav-bar ul {
-    margin: 0;
-    padding: 0;
-    /*margin-top: 50px;*/
-    top: 50%;
+  top: 25px;
+  right: 50px;
+  transition: height .2s linear; }
+  .add-button .line {
     position: absolute;
-    transform: translateY(-50%);
+    height: 2px;
+    background-color: black;
+    right: 0px;
     width: 100%; }
-  .nav-bar li {
+  .add-button .line_1 {
+    top: 15px;
+    transform: rotate(90deg); }
+  .add-button .line_2 {
+    top: 50%;
+    bottom: 0px; }
+
+.col-sm-2 {
+  padding: 0;
+  margin: 0; }
+
+.nav-bar {
+  display: none;
+  height: 700px;
+  background-color: rgba(134, 121, 131, 0.8); }
+  .nav-bar ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    list-style-type: none;
-    width: 100%;
-    text-align: center; }
-    .nav-bar li a {
+    top: 325px;
+    left: 50px;
+    position: absolute; }
+    .nav-bar ul a {
+      text-align: center;
       font-size: 24px;
-      color: #17294B;
-      font-family: Helvetica; }
+      text-decoration: none;
+      color: #17294B; }
+
+.nav-bar:hover {
+  color: #5E88A6; }
+
+.itinerary {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0 10px;
+  background-color: rgba(134, 121, 131, 0.8);
+  box-sizing: padding-box;
+  text-align: center;
+  height: 700px;
+  top: 69px;
+  right: 0; }
+  .itinerary span {
+    color: black;
+    font-size: 16px; }
+
+#days {
+  height: 520px;
+  overflow: scroll; }
+
+.selectItinerary {
+  bottom: 0;
+  right: 0;
+  position: relative; }
+
+.addItinerary {
+  margin: 10px; }
+
+.addDay {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: #1B4F6B;
+  border: 2px solid #1B4F6B; }
+
+.addDay:hover {
+  border: 2px solid #1B4F6B;
+  background-color: #1B4F6B;
+  color: white; }
+
+.options {
+  height: 75px; }
+
+.hello {
+  background-color: #A29DA9;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 35px;
+  padding: 5px 0;
+  color: white;
+  border-radius: 5px 5px 0 0; }
+  .hello div {
+    height: 150px;
+    background-color: #cccccc;
+    border-radius: 0 0 5px 5px; }
+
+.restaurant, .hotel, .activites {
+  background-color: #5E88A6;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 5px;
+  margin: 5px 0; }
+  .restaurant p, .hotel p, .activites p {
+    font-size: 18px;
+    color: white; }
+
+.pick:hover {
+  background-color: #C9D9E3; }
+
+h3 {
+  text-align: center;
+  margin: 5px; }
+
+.fa {
+  color: white; }
+
+article {
+  height: 150px; }
+
+.allHotels {
+  display: none;
+  height: 30px;
+  border-radius: 50px;
+  /*	margin-top: 5px;*/
+  margin-bottom: 10px;
+  /*	background-color: yellow;*/ }
+
+/*.content-column{
+	background-image: url("http://www.brandeis.edu/about/images/newformat/map2.jpg");
+}*/
+.h-group {
+  width: 100%; }
+
+#site-name {
+  text-align: center; }
+
+/*
+ORIGINAL BELOW
+header {
+	font-size: 15px;
+	text-align: center; 
+	font-family: Helvetica;
+
+}
+
+.main-container {
+	border-left: 60px solid white;
+	border-right: 60px solid white; 
+	position: relative;
+	background-image: url("/photos/map.png");
+	height:700px;
+}
+
+.add-button {
+	height: 30px;
+	width: 46px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 37px;
+	transition: height .2s linear;
+
+	.line {
+		position: absolute;
+		height: 2px;
+		background-color: black;
+		right: 0px;
+		width: 100%;
+	}
+
+	.line_1 {
+		top: 15px;
+		transform: rotate(90deg);
+	}
+	.line_2 {
+		top: 50%;
+		bottom: 0px;
+	}
+
+}
+
+.menu-button {
+	height: 30px;
+	width: 46px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 37px;
+	transition: height .2s linear;
+
+	.line {
+		position: absolute;
+		height: 2px;
+		background-color: black;
+		left: 0px;
+		width: 100%;
+	}
+
+	.line_1 {
+		top: 0px;
+	}
+	.line_3 {
+		bottom: 0px;
+	}
+	.line_2 {
+		top: 50%;
+		margin-top: -1px;
+	}
+}
+
+.menu-button:hover{
+	height: 34px;	
+} 
+
+.nav-bar {
+	position: absolute;
+	background-color: rgba(134, 121, 131, 0.8);
+	width: 15%;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		top: 50%;
+		position: absolute;
+		transform: translateY(-50%);
+		width: 100%;
+	}
+	li {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		width: 100%;
+		text-align: center;
+
+		a {
+			font-size: 24px; 
+			color: #17294B;
+			font-family: Helvetica; 
+		}
+	}
+}
+
+.add-bar {
+	position: absolute;
+	background-color: rgba(134, 121, 131, 0.8);
+	width: 40%;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+}
+
+body, .row, #content-column{
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	max-height: 700px;
+}
+
+.itinerary{
+	float: left;
+	margin: 0;
+	padding: 0 10px;
+	box-sizing: padding-box;
+	text-align: center;
+	max-height: 700px;
+
+	span{
+		color: gray;
+		font-size: 16px;
+	}
+}
+#days{
+	height:400px;
+	overflow: scroll;
+}
+.selectItinerary{
+	bottom: 0;
+	right: 0;
+	position: relative;
+}
+
+@mixin addDayButton{
+	width: 100%;
+	height:40px;
+	border-radius: 10px;
+	text-align: center;
+}
+.addDay{
+	@include addDayButton
+	color: #bf0000;
+	border: 2px solid #bf0000;
+}
+.addDay:hover{
+	border: 2px solid #bf0000;
+	background-color: #bf0000;
+	color: white;
+
+}
+.doneDay{
+	@include addDayButton
+	color: green;
+	border: 2px solid green;
+}
+.doneDay:hover{
+	border: 2px solid green;
+	background-color: green;
+	color: white;
+}
+.options{
+	height: 75px;
+
+.hello{
+	background-color: black;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	height: 35px;
+	padding: 5px 0px;
+	color:white;
+	border-radius: 5px 5px 0px 0px;
+	div{
+		height: 150px;
+		background-color: #cccccc;
+	}
+}
+
+.restaurant, .hotel, .activites{
+	background-color: purple;
+	width:100%;
+	text-align: center;
+	padding-top: 10px;
+	border-radius: 5px;
+	margin: 5px 0;
+	p {
+		font-size: 18px;
+		color: white;
+	}
+}
+
+.pick:hover{
+	background-color: yellow;
+}
+
+h3{
+	text-align: center;
+	margin: 5px;
+}
+
+.fa{
+	color: white;
+}
+
+.allHotels{
+	height: 150px;
+	background-color: yellow;
+}
+
+*/
